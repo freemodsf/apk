@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Mod APK</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+            text-align: center;
+        }
+
+        header {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #222;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        ul li {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .btn, .btn-final {
+            font-size: 1.1em;
+            padding: 12px 25px;
+            color: white;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #218838;
+        }
+
+        .btn-final {
+            display: none;
+        }
+
+        .slider-container {
+            display: none;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 300px;
+            height: 20px;
+            background-color: #e9ecef;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .slider-bar {
+            width: 0;
+            height: 100%;
+            background-color: #28a745;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                font-size: 1.5em;
+            }
+
+            ul li {
+                font-size: 1em;
+            }
+
+            .btn, .btn-final {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>App/Game Name</header>
+
+    <ul>
+        <li>✅ Get free mod APK   </li> 
+        <li>✅ No ads, no time wasted</li>
+        <li>✅ Direct Google Drive link</li>
+    </ul>
+
+    <div class="button-container">
+        <button id="getLinkBtn" class="btn">Get Google Drive Link</button>
+        <div class="slider-container" id="slider">
+            <div class="slider-bar" id="sliderBar"></div>
+        </div>
+        <button id="finalLinkBtn" class="btn-final">Download from Google Drive</button>
+    </div>
+
+    <script>
+        const getLinkBtn = document.getElementById('getLinkBtn');
+        const slider = document.getElementById('slider');
+        const sliderBar = document.getElementById('sliderBar');
+        const finalLinkBtn = document.getElementById('finalLinkBtn');
+
+        getLinkBtn.addEventListener('click', () => {
+            // Hide the initial button and show the slider
+            getLinkBtn.style.display = 'none';
+            slider.style.display = 'block';
+
+            // Incrementally fill the slider bar over 10 seconds
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += 1; // Increase progress by 1%
+                sliderBar.style.width = progress + '%';
+
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    slider.style.display = 'none'; // Hide the slider
+                    finalLinkBtn.style.display = 'inline-block'; // Show the final link button
+                }
+            }, 100); // Update every 100ms (10 seconds total)
+        });
+
+        finalLinkBtn.addEventListener('click', () => {
+            // Replace this link with the actual Google Drive URL
+            window.open('https://drive.google.com', '_blank');
+        });
+    </script>
+
+</body>
+</html>
